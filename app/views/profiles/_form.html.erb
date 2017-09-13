@@ -1,0 +1,66 @@
+<%= form_with(model: profile, local: true) do |form| %>
+  <% if profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_area :name, id: :profile_name %>
+    <%= form.label :email %>
+    <%= form.text_area :email, id: :profile_email %>
+    <%= form.label :eye_color %>
+    <%= form.text_area :eye_color, id: :profile_name %>
+    <%= form.label :DOB %>
+    <%= form.text_area :DOB, id: :profile_name %>
+  </div>
+
+  <!-- <div class="field">
+    <%= form.label :email %>
+    <%= form.text_area :email, id: :profile_email %>
+  </div> -->
+
+  <!-- <div class="field">
+    <%= form.label :eye_color %>
+    <%= form.text_area :eye_color, id: :profile_name %>
+  </div> -->
+
+  <!-- <div class="field">
+    <%= form.label :DOB %>
+    <%= form.text_area :DOB, id: :profile_name %>
+  </div> -->
+
+  <div class="field">
+    <%= form.label :hair_color %>
+    <%= form.text_area :hair_color, id: :profile_name %>
+    <%= form.label :height %>
+    <%= form.text_area :height, id: :profile_name %>
+    <%= form.label :sex %>
+    <%= form.text_area :sex, id: :profile_name %>
+  </div>
+
+  <!-- <div class="field">
+    <%= form.label :height %>
+    <%= form.text_area :height, id: :profile_name %>
+  </div> -->
+<!--
+  <div class="field">
+    <%= form.label :sex %>
+    <%= form.text_area :sex, id: :profile_name %>
+  </div> -->
+
+  <div class="container">
+  </div>
+
+  <div class="actions">
+    <input type="submit" name="commit" value="Create Passport" data-disable-with="Create Passport">
+    <!-- <%= form.submit %> -->
+  </div>
+<% end %>
