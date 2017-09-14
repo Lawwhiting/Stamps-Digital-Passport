@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   resources :destinations
   resources :profiles
   root :to => 'destinations#index'
